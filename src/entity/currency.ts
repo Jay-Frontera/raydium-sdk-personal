@@ -2,7 +2,7 @@
 
 import { PublicKey } from '@solana/web3.js'
 
-import { PublicKeyish, TOKEN_PROGRAM_ID, validateAndParsePublicKey } from '../common'
+import { PublicKeyish, TOKEN_PROGRAM_ID } from '../common'
 import { SOL, WSOL } from '../token'
 
 /**
@@ -62,8 +62,8 @@ export class Token extends Currency {
   ) {
     super(decimals, symbol, name)
 
-    this.programId = validateAndParsePublicKey(programId)
-    this.mint = validateAndParsePublicKey(mint)
+    this.programId = programId
+    this.mint = mint
   }
 
   /**
