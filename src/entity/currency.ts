@@ -62,8 +62,8 @@ export class Token extends Currency {
   ) {
     super(decimals, symbol, name)
 
-    this.programId = programId
-    this.mint = mint
+    this.programId = new PublicKey(programId)
+    this.mint = new PublicKey(mint)
   }
 
   /**
